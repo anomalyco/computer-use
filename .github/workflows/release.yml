@@ -43,7 +43,7 @@ jobs:
 
   package-npm:
     needs: release-metadata
-    runs-on: macos-26
+    runs-on: blacksmith-6vcpu-macos-26
 
     steps:
       - name: Check out repository
@@ -148,7 +148,7 @@ jobs:
   release-cursor-motion-dmg:
     needs: release-metadata
     if: ${{ github.event_name == 'push' }}
-    runs-on: macos-26
+    runs-on: blacksmith-6vcpu-macos-26
 
     steps:
       - name: Check out repository
